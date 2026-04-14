@@ -43,10 +43,10 @@ export const Interface = ({ onSectionChange }) => {
 const AboutSection = ({ onSectionChange }) => {
   return (
     <Section mobileTop>
-      <h1 className=" text-4xl md:text-5xl    font-extrabold leading-snug text-primary md:mt-0">
+      <h1 className=" text-4xl md:text-5xl    font-extrabold leading-snug text-black  md:mt-0">
         Hi, I'm
         <br />
-        <span className="bg-primary text-gray-600 px-1 text-4xl  italic">
+        <span className="bg-transparent text-gray-600 px-1 text-4xl  italic">
           Rohan Andhariya
         </span>
       </h1>
@@ -63,7 +63,7 @@ const AboutSection = ({ onSectionChange }) => {
         and improve online visibility.
       </motion.p>
       <motion.button
-        className="bg-primary text-gray-600 py-4 px-8 rounded-lg font-bold text-lg mt-5 border-gray-600 border-2"
+        className="bg-transparent text-gray-600 py-4 px-8 rounded-lg font-bold text-lg mt-5 border-gray-600 border-2"
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 2 }}
@@ -188,7 +188,7 @@ const ContactSection = () => {
 
   return (
     <Section>
-      <h2 className="text-3xl md:text-5xl font-bold text-primary">Contact me</h2>
+      <h2 className="text-3xl md:text-5xl font-bold text-black">Contact me</h2>
       <div className="mt-8 p-8 rounded-md bg-primary bg-opacity-50 md:bg-opacity-100  w-96 max-w-full">
         {state.succeeded ? (
           <p className="text-white text-xl font-bold border-black p-2 rounded border-2  text-center">Thank you for your message!</p>
@@ -196,7 +196,7 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit}>
             <label
               htmlFor="name"
-              className="font-bold text-primary  block mb-1"
+              className="font-bold text-black  block mb-1"
             >
               Name
             </label>
@@ -213,7 +213,7 @@ const ContactSection = () => {
             />
             <label
               htmlFor="email"
-              className="font-bold text-primary  block mb-1 mt-8"
+              className="font-bold text-black  block mb-1 mt-8"
             >
               Email
             </label>
@@ -230,7 +230,7 @@ const ContactSection = () => {
             />
             <label
               htmlFor="email"
-              className="font-bold text-primary  block mb-1 mt-8"
+              className="font-bold text-black  block mb-1 mt-8"
             >
               Message
             </label>
@@ -241,7 +241,7 @@ const ContactSection = () => {
               required
             />
             <ValidationError
-              className="mt-1 text-gray-600"
+              className="mt-1 text-white"
               errors={state.errors}
             />
             <div className="flex gap-5 mt-10">
@@ -262,7 +262,7 @@ const ContactSection = () => {
               </a>
             </div>
             <button
-              className="bg-secondary text-white py-4 px-8 rounded-lg font-bold text-lg mt-10 border-black border-2"
+              className="bg-transparent text-white py-4 px-8 rounded-lg font-bold text-lg mt-10 border-black border-2"
               disabled={state.submitting}
             >
               Submit

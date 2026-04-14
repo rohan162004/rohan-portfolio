@@ -8,7 +8,7 @@ export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
     <>
       <button
         onClick={() => setMenuOpened(!menuOpened)}
-        className="z-20 fixed  top-4 right-4 md:top-12 md:right-12 p-3 bg-primary w-11 h-11 rounded-md border-black border-2"
+        className="z-20 fixed  top-4 right-4 md:top-12 md:right-12 p-3 bg-transparent w-11 h-11 rounded-md border-black border-2"
       >
         <div
           className={`bg-black h-0.5 rounded-md w-full transition-all ${
