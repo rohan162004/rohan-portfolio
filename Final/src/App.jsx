@@ -30,7 +30,7 @@ function App() {
       >
         <Canvas shadows camera={{ position: [0, 2.5, 8.5], fov: 42 }}>
           {/* <color attach="background" args={["#F5E9DC"]} /> */}
-          <ScrollControls pages={4} damping={0.1}>
+          <ScrollControls pages={3} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
               <Suspense>

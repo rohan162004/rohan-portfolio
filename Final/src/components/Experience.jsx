@@ -13,7 +13,6 @@ import { animate, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { framerMotionConfig } from "../config";
 import * as THREE from "three";
-import { Projects } from "./Projects";
 import { Background } from "./Background";
 
 export const Experience = ({ menuOpened }) => {
@@ -54,8 +53,8 @@ export const Experience = ({ menuOpened }) => {
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
 
-    if (curSection > 3) {
-      curSection = 3;
+    if (curSection > 2) {
+      curSection = 2;
     }
 
     if (curSection !== section) {
@@ -109,18 +108,7 @@ export const Experience = ({ menuOpened }) => {
             scaleZ: isMoblie ? 1.1 : 1,
           },
           2: {
-            x: isMoblie ? -1.4 : -2,
-            y: -viewport.height * 2 + -0.9,
-            z: 0,
-            rotateX: 0,
-            rotateY: Math.PI / 2,
-            rotateZ: 0,
-            scaleX: 1,
-            scaleY: 1,
-            scaleZ: 1,
-          },
-          3: {
-            y: -viewport.height * 3 + 0.6,
+            y: -viewport.height * 2 + 0.6,
             x: 0.2,
             z: 7,
             rotateX: 0,
@@ -186,7 +174,7 @@ export const Experience = ({ menuOpened }) => {
               transparent
               distort={0.4}
               speed={4}
-              color={"red"}
+              color={"#A6B1E1"}
             />
           </mesh>
         </Float>
@@ -198,7 +186,7 @@ export const Experience = ({ menuOpened }) => {
               transparent
               distort={1}
               speed={5}
-              color="yellow"
+              color="#DCD6F7"
             />
           </mesh>
         </Float>
@@ -210,12 +198,11 @@ export const Experience = ({ menuOpened }) => {
               transparent
               factor={1}
               speed={5}
-              color={"blue"}
+              color={"#424874"}
             />
           </mesh>
         </Float>
       </motion.group>
-      <Projects />
     </>
   );
 };
